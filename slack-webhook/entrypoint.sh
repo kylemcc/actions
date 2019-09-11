@@ -13,4 +13,4 @@ if [ -z "$payload" ]; then
 fi
 
 payload=$(echo $payload | envsubst)
-curl -XPOST -d"payload=$payload" $SLACK_WEBHOOK_URL
+curl -s -XPOST -d"payload=$payload" $SLACK_WEBHOOK_URL
