@@ -1,0 +1,17 @@
+name: 'Slack Webhook v2'
+description: 'Sends slack notifications'
+inputs:
+  webhook_url:
+    description: 'Slack webhook url'
+    required: true
+  payload:
+    description: 'A complete json-encode message payload (https://api.slack.com/docs/messages/builder)'
+    required: false
+    default: ''
+  message:
+    description: 'Message text to send'
+    required: false
+    default: ''
+runs:
+  using: 'node12'
+  main: 'index.js'
